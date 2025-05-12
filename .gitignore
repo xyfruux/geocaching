@@ -1,0 +1,12 @@
+# Ignore Jekyll build folder
+_site/
+
+# Ignore temporary files
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ignore log files and system files
+*.log
+*.DS_Store
+Thumbs.db
