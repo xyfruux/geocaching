@@ -1,5 +1,5 @@
 ---
-title: Pølse Pølse
+title: Test Cache
 layout: default
 ---
 
