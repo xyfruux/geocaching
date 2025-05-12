@@ -1,5 +1,5 @@
 title: Xyfrux Geocaching
 collections:
-  pages:
+  main:
     output: true
     permalink: /:title/
