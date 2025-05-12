@@ -3,3 +3,6 @@ collections:
   main:
     output: true
     permalink: /:title/
+  geocaches:
+    output: true
+    permalink: /geocaches/:title/
