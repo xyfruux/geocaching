@@ -1,4 +1,5 @@
 arrowDir = null;
+score = 0;
 
 function setArrowDir() {
   let rnd = Math.floor(Math.random() * 4);
@@ -25,7 +26,13 @@ console.log(arrowDir);
 document.addEventListener("keydown", (event) => {
   if (event.key === arrowDir) {
     console.log("Correct key pressed!");
+    score++;
     setArrowDir();
-    console.log(arrowDir);
+    console.log(arrowDir, score);
+  } else {
+    console.log("Wrong key pressed!");
+    score = 0;
+    setArrowDir();
+    console.log(arrowDir, score);
   }
 });
