@@ -6,3 +6,6 @@ collections:
   geocaches:
     output: true
     permalink: /geocaches/:title/
+  geocaches-wip:
+    output: true
+    permalink: /geocaches-wip/:title/
