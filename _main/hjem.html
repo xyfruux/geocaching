@@ -5,8 +5,28 @@ permalink: /
 ---
 
 <h1>Hjem</h1>
-<p>
-  Welkommen til min personlig Geocaching side! <br />
-  Her kan du finde alle min Geocache, som kræver dig til at komme på min
-  hjemmeside.
-</p>
+<section>
+  <h2>Introduktion</h2>
+  <p>
+    Welkommen til min personlig Geocaching side! <br />
+    Her kan du finde alle min Geocaches, som kræver dig til at komme på min
+    hjemmeside.
+  </p>
+</section>
+<section>
+  <h2>Liste af Geocaches</h2>
+  <ul>
+    {% for cache in site.geocaches %}
+    <li>
+      <a href="{{ cache.url }}">{{ cache.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <h2>Liste af WIP Geocaches</h2>
+  <ul>
+    {% for cache in site.geocaches-wip %}
+    <li>
+      <a href="{{ cache.url }}">{{ cache.title }}</a>
+    </li>
+    {% endfor %}
+</section>
