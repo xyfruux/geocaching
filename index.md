@@ -1,5 +1,6 @@
 ---
-title: Index
+title: Hjem
 layout: default
 ---
-# Index
+# Velkommen til min hjemmeside!
+Her kan du løse mine Geocaching Mysteries.
