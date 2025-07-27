@@ -6,3 +6,10 @@
     font-family: "Funnel Display", sans-serif;
     font-weight: normal;
 }
+
+header{
+    border-bottom: 2px solid black;
+}
+footer{
+    border-top: 2px solid black;
+}
