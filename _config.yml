@@ -1,0 +1,4 @@
+collections:
+  cache:
+    output: true
+    permalink: /cache/:name/
