@@ -23,9 +23,16 @@ document.addEventListener("keypress", function(e){
     console.log(e)
 })
 
-function printScreen(arr){
-    for (let i = 0; i < arr.length; i++) {
-        const comment = document.createComment(arr[i])
-        document.body.appendChild(comment)
-    }
+comments = []
+function printScreen(screen){
+    // Clear comment nodes and reset comments array
+    comments.forEach(i => i.remove())
+    comments = []
+
+    // Create and append new comment nodes and add to comments array, ready to be removed on next screen print
+    comments = screen.map(i => {
+        const comment = document.createComment(i);
+        document.body.appendChild(comment);
+        return comment;
+    });
 }
