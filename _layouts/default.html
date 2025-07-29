@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/default.css">
-    {% if page.style %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.style }}.css">
+    {% if page.css %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.css }}.css">
     {% endif %}
 
     <title>Xyfrux GC | {{page.title}}</title>
@@ -22,8 +22,8 @@
         <a href="https://www.geocaching.com/p/?guid=a600a9db-fecc-4e42-bc0f-978fb5687b8b">Geocaching Profil</a>
         <a href="https://www.geocaching.com/play/results?sort=placedate&asc=false&ct=8&hb=xyfrux">Mine Mysteries</a>
     </footer>
-    {% if page.script %}
-    <script src="{{ site.baseurl }}/assets/js/{{ page.script }}.css"></script>
+    {% if page.js %}
+    <script src="{{ site.baseurl }}/assets/js/{{ page.js }}.css"></script>
     {% endif %}
 </body>
 </html>
