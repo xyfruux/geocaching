@@ -22,5 +22,8 @@
         <a href="https://www.geocaching.com/p/?guid=a600a9db-fecc-4e42-bc0f-978fb5687b8b">Geocaching Profil</a>
         <a href="https://www.geocaching.com/play/results?sort=placedate&asc=false&ct=8&hb=xyfrux">Mine Mysteries</a>
     </footer>
+    {% if page.script %}
+    <script src="{{ site.baseurl }}/assets/js/{{ page.script }}.css"></script>
+    {% endif %}
 </body>
 </html>
