@@ -9,9 +9,7 @@ document.addEventListener("keypress", function(e){
     e.key === "a" && plrPos[0] > 0 && plrPos[0]--;
     e.key === "d" && plrPos[0] < 10 && plrPos[0]++;
 
-    console.log(plrPos)
-    console.log(e)
-    printScreen()
+    ["w", "a", "s", "d"].includes(e.key) ? printScreen() : null
 })
 
 function printScreen(){
