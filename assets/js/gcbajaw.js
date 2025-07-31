@@ -12,7 +12,7 @@ document.addEventListener("keypress", function(e){
     if(["w", "a", "s", "d"].includes(e.key)){
         printScreen();
 
-        plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!") : null
+        plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!\nHer er koordinaterne:\n[Koordinater]") : null
     }
 })
 
