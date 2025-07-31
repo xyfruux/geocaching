@@ -1,5 +1,5 @@
 ---
-title: Inpsektion
+title: Inpsektion - BETA
 js: gcbajaw
 ---
 Nå... så er spørgsmålet, hvordan du ville komme videre.  
