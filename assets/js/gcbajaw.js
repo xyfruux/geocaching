@@ -4,22 +4,11 @@ console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmes
 plrPos = [0, 0] // X and Y coordinates
 
 document.addEventListener("keypress", function(e){
-    switch(e.key){
-        case "w":
-            plrPos[1] < 10 && (plrPos[1] += 1)
-            break
-        case "s":
-            plrPos[1] > 0 && (plrPos[1] -= 1)
-            break
-        case "a":
-            plrPos[0] > 0 && (plrPos[0] -= 1)
-            break
-        case "d":
-            plrPos[0] < 10 && (plrPos[0] += 1)
-            break
-        default:
-            break
-    }
+    e.key === "w" && plrPos[1] < 10 && plrPos[1]++;
+    e.key === "s" && plrPos[1] > 0 && plrPos[1]--;
+    e.key === "a" && plrPos[0] > 0 && plrPos[0]--;
+    e.key === "d" && plrPos[0] < 10 && plrPos[0]++;
+
     console.log(plrPos)
     console.log(e)
     printScreen()
