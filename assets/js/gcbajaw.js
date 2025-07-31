@@ -1,4 +1,3 @@
-console.log("gcbajaw.js loaded")
 console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nGod fornøjelse!")
 
 plrPos = [0, 0] // X and Y coordinates
@@ -22,7 +21,7 @@ function printScreen(){
     for(let y = 10; y >= 0; y--){
         for(let x = 0; x <= 10; x++){
             output += x === plrPos[0] && y === plrPos[1] ? "🥳" : x === btnPos[0] && y === btnPos[1] ? "🔴" : "⬛";
-            
+
         }
         output += "\n"
     }
