@@ -2,7 +2,7 @@ console.log("gcbajaw.js loaded")
 console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nGod fornøjelse!")
 
 plrPos = [0, 0] // X and Y coordinates
-btnPos = [5, 5]
+btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3] // Random button position, from 3 to 10 on both axes
 
 document.addEventListener("keypress", function(e){
     e.key === "w" && plrPos[1] < 10 && plrPos[1]++;
