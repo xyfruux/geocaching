@@ -1,4 +1,5 @@
 console.log("gcbajaw.js loaded")
+console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nGod fornøjelse!")
 
 plrPos = [0, 0] // X and Y coordinates
 
@@ -21,6 +22,7 @@ document.addEventListener("keypress", function(e){
     }
     console.log(plrPos)
     console.log(e)
+    printScreen()
 })
 
 function printScreen(){
