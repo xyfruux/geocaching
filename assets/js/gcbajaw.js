@@ -13,9 +13,7 @@ document.addEventListener("keypress", function(e){
     if(["w", "a", "s", "d"].includes(e.key)){
         printScreen();
 
-        if(plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1]){
-            console.log("Du trykkedet på knappen!");
-        }
+        plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!") : null
     }
 })
 
@@ -24,7 +22,7 @@ function printScreen(){
     for(let y = 10; y >= 0; y--){
         for(let x = 0; x <= 10; x++){
             output += x === plrPos[0] && y === plrPos[1] ? "🥳" : x === btnPos[0] && y === btnPos[1] ? "🔴" : "⬛";
-
+            
         }
         output += "\n"
     }
