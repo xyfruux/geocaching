@@ -1,3 +1,8 @@
+/*
+Okay! Du fandt frem til kodningen. Det var ikke meningen, men det er sværere end at finde frem til konsollen.
+Nå... du må godt rode lidt her, hvis du har lyst til det. Jeg har ikke noget imod det. :)
+*/
+
 console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nGod fornøjelse!");
 
 plrPos = [0, 0]; // X and Y coordinates
