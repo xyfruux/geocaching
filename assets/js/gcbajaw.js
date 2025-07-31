@@ -23,16 +23,17 @@ document.addEventListener("keypress", function(e){
     console.log(e)
 })
 
-comments = []
-function printScreen(screen){
-    // Clear comment nodes and reset comments array
-    comments.forEach(i => i.remove())
-    comments = []
-
-    // Create and append new comment nodes and add to comments array, ready to be removed on next screen print
-    comments = screen.map(i => {
-        const comment = document.createComment(i);
-        document.body.appendChild(comment);
-        return comment;
-    });
+function printScreen(){
+    let output = ""
+    for(let y = 10; y >= 0; y--){
+        for(let x = 0; x <= 10; x++){
+            if(x === plrPos[0] && y === plrPos[1]){
+                output += "P" // Player position
+            } else {
+                output += "#" // Empty space
+            }
+        }
+        output += "\n"
+    }
+    console.log(output)
 }
