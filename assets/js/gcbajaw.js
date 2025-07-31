@@ -27,11 +27,7 @@ function printScreen(){
     let output = ""
     for(let y = 10; y >= 0; y--){
         for(let x = 0; x <= 10; x++){
-            if(x === plrPos[0] && y === plrPos[1]){
-                output += "P" // Player position
-            } else {
-                output += "#" // Empty space
-            }
+            output += (x === plrPos[0] && y === plrPos[1]) ? "🥳" : "⬛"
         }
         output += "\n"
     }
