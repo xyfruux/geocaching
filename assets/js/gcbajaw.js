@@ -8,6 +8,13 @@ console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmes
 plrPos = [0, 0]; // X and Y coordinates
 btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
 
+// Without keyboard
+window.w = () => movePlayer("w");
+window.a = () => movePlayer("a");
+window.s = () => movePlayer("s");
+window.d = () => movePlayer("d");
+
+// With keyboard
 document.addEventListener("keypress", function(e){
     ["w", "a", "s", "d"].includes(e.key) ? movePlayer(e.key) : null;
 })
