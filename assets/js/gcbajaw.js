@@ -9,17 +9,17 @@ plrPos = [0, 0]; // X and Y coordinates
 btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
 
 document.addEventListener("keypress", function(e){
-    e.key === "w" && plrPos[1] < 10 && plrPos[1]++;
-    e.key === "s" && plrPos[1] > 0 && plrPos[1]--;
-    e.key === "a" && plrPos[0] > 0 && plrPos[0]--;
-    e.key === "d" && plrPos[0] < 10 && plrPos[0]++;
-
-    if(["w", "a", "s", "d"].includes(e.key)){
-        printScreen();
-
-        plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!\nHer er koordinaterne:\n[Koordinater]") : null;
-    }
+    ["w", "a", "s", "d"].includes(e.key) ? movePlayer(e.key) : null;
 })
+
+function movePlayer(dir){
+    dir === "w" && plrPos[1] < 10 && plrPos[1]++;
+    dir === "s" && plrPos[1] > 0 && plrPos[1]--;
+    dir === "a" && plrPos[0] > 0 && plrPos[0]--;
+    dir === "d" && plrPos[0] < 10 && plrPos[0]++;
+    plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!\nHer er koordinaterne:\n[Koordinater]") : null;
+    printScreen();
+}
 
 function printScreen(){
     let output = "";
