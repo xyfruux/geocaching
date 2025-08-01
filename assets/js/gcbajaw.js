@@ -3,7 +3,7 @@ Okay! Du fandt frem til kodningen. Det var ikke meningen, men det er sværere en
 Nå... du må godt rode lidt her, hvis du har lyst til det. Jeg har ikke noget imod det. :)
 */
 
-console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nHeld og lykke!");
+console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten) og bruge WASD-tasterne til at bevæge dig rundt.\nDu skal hen til den røde knap (den røde cirkel).\nHeld og lykke!");
 
 plrPos = [0, 0]; // X and Y coordinates
 btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
