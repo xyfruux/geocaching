@@ -3,23 +3,31 @@ Okay! Du fandt frem til kodningen. Det var ikke meningen, men det er sværere en
 Nå... du må godt rode lidt her, hvis du har lyst til det. Jeg har ikke noget imod det. :)
 */
 
-console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten Inspektion) og bruge WASD-tasterne til at bevæge dig rundt.\n\nHeld og lykke!");
+let plrPos = [0, 0]; // X and Y coordinates
+let btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
 
-plrPos = [0, 0]; // X and Y coordinates
-btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
+console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten) og bruge WASD-tasterne til at bevæge dig rundt.\nHvis du er på telefon, kan du bruge w(), a(), s() og d(), som har den samme funktion.\nDu skal hen til den røde knap (den røde cirkel).\nHeld og lykke!");
+printScreen();
 
+// Without keyboard
+window.w = () => movePlayer("w");
+window.a = () => movePlayer("a");
+window.s = () => movePlayer("s");
+window.d = () => movePlayer("d");
+
+// With keyboard
 document.addEventListener("keypress", function(e){
-    e.key === "w" && plrPos[1] < 10 && plrPos[1]++;
-    e.key === "s" && plrPos[1] > 0 && plrPos[1]--;
-    e.key === "a" && plrPos[0] > 0 && plrPos[0]--;
-    e.key === "d" && plrPos[0] < 10 && plrPos[0]++;
-
-    if(["w", "a", "s", "d"].includes(e.key)){
-        printScreen();
-
-        plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!\nHer er koordinaterne:\n[Koordinater]") : null;
-    }
+    ["w", "a", "s", "d"].includes(e.key) ? movePlayer(e.key) : null;
 })
+
+function movePlayer(dir){
+    dir === "w" && plrPos[1] < 10 && plrPos[1]++;
+    dir === "s" && plrPos[1] > 0 && plrPos[1]--;
+    dir === "a" && plrPos[0] > 0 && plrPos[0]--;
+    dir === "d" && plrPos[0] < 10 && plrPos[0]++;
+    plrPos[0] === btnPos[0] && plrPos[1] === btnPos[1] ? console.log("Du trykkede på knappen!\nHer er koordinaterne:\n[Koordinater]") : null;
+    printScreen();
+}
 
 function printScreen(){
     let output = "";
