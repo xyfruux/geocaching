@@ -7,6 +7,7 @@ let plrPos = [0, 0]; // X and Y coordinates
 let btnPos = [Math.floor(Math.random() * 8) + 3, Math.floor(Math.random() * 8) + 3]; // Random button position, from 3 to 10 on both axes
 
 console.log("Du fandt stedet!\nFor at komme videre, skal du fokusere på hjemmesiden (tryk ude fra konsollen, f.eks. på teksten) og bruge WASD-tasterne til at bevæge dig rundt.\nHvis du er på telefon, kan du bruge w(), a(), s() og d(), som har den samme funktion.\nDu skal hen til den røde knap (den røde cirkel).\nHeld og lykke!");
+printScreen();
 
 // Without keyboard
 window.w = () => movePlayer("w");
